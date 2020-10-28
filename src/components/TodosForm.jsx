@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import addTodo from "../redux/todosActions";
+import { addTodo } from "../redux/todosActions";
 
 function TodosForm(props) {
-  console.log(props);
   const [todoInput, setTodoInput] = useState("");
 
   const handleChange = (e) => {

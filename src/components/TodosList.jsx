@@ -3,7 +3,6 @@ import TodoItem from "./TodItem";
 import { connect } from "react-redux";
 
 function TodosList(props) {
-  console.log(props.todos);
   return (
     <div>
       <ul>

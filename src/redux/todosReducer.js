@@ -1,4 +1,10 @@
-const initialTodosState = [];
+const initialTodosState = [
+  {
+    id: 1,
+    todosText: "learn redux",
+    completed: true,
+  },
+];
 
 export default function todosReducer(state = initialTodosState, action) {
   switch (action.type) {
@@ -11,6 +17,20 @@ export default function todosReducer(state = initialTodosState, action) {
           completed: false,
         },
       ];
+    case "TOGGLE_TODO":
+      return state.map((todo) => {
+        if (todo.id !== action.id) {
+          return todo;
+        }
+        {
+          console.log("toggle todo reducer ran");
+        }
+        return {
+          ...todo,
+          completed: !todo.completed,
+        };
+      });
+
     default:
       return state;
   }
