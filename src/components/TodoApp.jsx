@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import TodosList from "./TodosList";
 import TodosForm from "./TodosForm";
+import FilterLinks from "./FilterLinks";
 
 function TodoApp() {
   return (
@@ -8,6 +9,7 @@ function TodoApp() {
       <h3>this is a todoapp component</h3>
       <TodosForm />
       <TodosList />
+      <FilterLinks />
     </div>
   );
 }

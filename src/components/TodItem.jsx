@@ -4,7 +4,6 @@ import { toggleTodo } from "../redux/todosActions";
 
 function TodoItem(props) {
   const handleClick = () => {
-    console.log(props.todo.id);
     props.toggleTodo(props.todo.id);
   };
 

@@ -8,7 +8,6 @@ export function addTodo(todoObj) {
 }
 
 export function toggleTodo(id) {
-  console.log("toggle todo action ran");
   return {
     type: "TOGGLE_TODO",
     id: id,
