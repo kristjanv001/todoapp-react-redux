@@ -6,10 +6,9 @@ import FilterLinks from "./FilterLinks";
 function TodoApp() {
   return (
     <div style={{ border: "1px solid black", padding: 15 }}>
-      <h3>this is a todoapp component</h3>
+      <FilterLinks />
       <TodosForm />
       <TodosList />
-      <FilterLinks />
     </div>
   );
 }

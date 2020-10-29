@@ -3,12 +3,12 @@ import store from "../redux/store";
 
 function FilterLink({ currentFilter, filterString, children }) {
   if (filterString === currentFilter) {
-    return <span>{children}</span>;
+    return <button>{children}</button>;
   }
   return (
-    <a
-      href="#"
-      onClick={(e) => {
+    <button
+      style={{ color: "grey" }}
+      onClick={() => {
         store.dispatch({
           type: "SET_FILTER",
           payload: filterString,
@@ -16,7 +16,7 @@ function FilterLink({ currentFilter, filterString, children }) {
       }}
     >
       {children}
-    </a>
+    </button>
   );
 }
 

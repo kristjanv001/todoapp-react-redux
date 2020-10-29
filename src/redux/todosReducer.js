@@ -22,9 +22,7 @@ export default function todosReducer(state = initialTodosState, action) {
         if (todo.id !== action.id) {
           return todo;
         }
-        {
-          console.log("toggle todo reducer ran");
-        }
+
         return {
           ...todo,
           completed: !todo.completed,

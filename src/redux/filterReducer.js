@@ -17,5 +17,7 @@ export function getFilteredTodos(todos, payload) {
       return todos.filter((todo) => todo.completed);
     case "SHOW_UNDONE":
       return todos.filter((todo) => !todo.completed);
+    default:
+      return todos;
   }
 }

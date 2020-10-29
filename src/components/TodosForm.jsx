@@ -18,7 +18,7 @@ function TodosForm(props) {
   };
 
   return (
-    <div>
+    <div style={{ marginTop: 20 }}>
       <form onSubmit={handleSubmit}>
         <input value={todoInput} onChange={handleChange} />
         <button type="submit">Add a todo</button>
