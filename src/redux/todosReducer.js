@@ -1,10 +1,4 @@
-const initialTodosState = [
-  {
-    id: 1,
-    todosText: "learn redux",
-    completed: true,
-  },
-];
+const initialTodosState = [];
 
 export default function todosReducer(state = initialTodosState, action) {
   switch (action.type) {

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { addTodo } from "../redux/todosActions";
+import { v4 as uuidv4 } from "uuid";
 
 function TodosForm(props) {
   const [todoInput, setTodoInput] = useState("");
@@ -12,7 +13,7 @@ function TodosForm(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    props.addTodo({ id: Date.now(), todosText: todoInput, completed: false });
+    props.addTodo({ id: uuidv4(), todosText: todoInput, completed: false });
 
     setTodoInput("");
   };
